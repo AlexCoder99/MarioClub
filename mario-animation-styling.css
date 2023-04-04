@@ -1,0 +1,371 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* "drawing" of sky, grass and road */
+
+.sky, .grass, .road{
+    position: relative;
+}
+
+.sky{
+    background: linear-gradient(to right,#c7e4ff -3%,#4da9ff 20%,#4da9ff 80%,#c7e4ff 103%);
+    height: 45%;
+}
+
+.grass{
+    background: linear-gradient(to bottom,#b7ffbb 0%, #69ee72 29%, #3ca844 89%);
+    height: 25%;
+    position: relative;
+}
+
+.road{
+    border-top: solid #2b2b2b 10px;
+    border-bottom:  solid #2b2b2b 10px;
+    background: linear-gradient(0deg, #7e7e7e -10%, #3f3f3f 15%, #3f3f3f 85%, #7e7e7e 110%);
+    height: 30%;
+    box-sizing: border-box;
+}
+
+.lines{
+    height: 0px;
+    border-bottom: white dashed 8px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+}
+
+/* sky objects */
+
+.cloud{
+    position: absolute;
+    
+}
+.cloud:nth-of-type(1){
+    width: 300px;
+    top: 16%;
+    animation: wind 17s linear infinite reverse;
+}
+.cloud:nth-of-type(2){
+    width: 200px;
+    top: 38%;
+    opacity: 1;
+    animation: wind 10s linear infinite alternate;
+}
+.cloud:nth-of-type(3){
+    width: 250px;
+    top: 55%;
+    opacity: .7;
+    animation: wind 12s 2s both linear infinite alternate;
+}
+.cloud:nth-of-type(4){
+    width: 400px;
+    top: 7%;
+    opacity: .4;
+    animation: wind 25s 1s both linear infinite normal;
+}
+.cloud:nth-of-type(5){
+    width: 140px;
+    top: 32%;
+    opacity: .6;
+    animation: wind 8s 1s both linear infinite reverse;
+}
+
+
+
+#mariokart-logo{
+    text-align: center;
+    width: 400px;
+    animation: drop 1.2s 1s linear both;
+}
+
+
+.emblem:nth-child(1){
+    width: 50px;
+    top: 0px;
+    background-color: whitesmoke;
+    border: red 3px inset;
+    border-radius: 45px;
+    opacity: 0;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    animation: rotate 1s ease forwards;
+    text-align: center;
+    transition:.4s;
+}
+
+.emblem:nth-child(1):hover{
+    background-color: #ffcbcb;
+    width: 60px;
+    cursor: pointer;
+}
+
+.emblem:nth-child(2){
+    width: 50px;
+    top: 0px;
+    background-color: whitesmoke;
+    border: 3px #009e00 inset;
+    border-radius: 45px;
+    padding: 10px;
+    margin: 10px;
+    opacity: 0;
+    text-align: center;
+    animation: rotate 1s .2s ease forwards;
+    text-align: center;
+    transition: .4s;
+}
+.emblem:nth-child(2):hover{
+    background-color: #c2e0c2;
+    width: 60px;
+    cursor: pointer;
+}
+
+
+/* grass objects */
+
+#wood-house{
+    position: absolute;
+    width: 220px;
+    left: 64%;
+    top: -145px;
+}
+
+#long-hills{
+    position: absolute;
+    width: 240px;
+    left: 83%;
+    top: -235px;
+    z-index: 0;
+}
+
+#eyes-hills1{
+    position: absolute;
+    width: 250px;
+    left: 3%;
+    top: -165px;
+    z-index: 2;
+}
+
+#eyes-hills2{
+    position: absolute;
+    width: 280px;
+    left: 13%;
+    top: -167px;
+    z-index: 1;
+}
+
+
+#yoshi{
+    position: absolute;
+    width: 90px;
+    left: 64%;
+    top: -5px;
+}
+
+#red-yoshi{
+    position: absolute;
+    width: 84px;
+    left: 80%;
+    top: 40px;
+    transform: rotateY(180deg);
+}
+
+.koopa{
+    position: absolute;
+}
+
+.koopa:nth-child(7){
+    width: 65px;
+    left: 40%;
+    top: 12px;
+    transform: rotateY(180deg);
+}
+
+.koopa:nth-child(8){
+    width: 50px;
+    left: 7%;
+    top: -20px;
+    transform: rotateY(180deg);
+    z-index: 3;
+}
+
+.koopa:nth-child(9){
+    width: 92px;
+    left: 20%;
+    top: 72px;
+    
+}
+
+.goomba{
+    position: absolute;
+}
+
+.goomba:nth-child(10){
+    width: 58px;
+    left: 90%;
+    top: -32px;
+}
+
+.goomba:nth-child(11){
+    width: 66px;
+    left: 27%;
+    top: 10px;
+}
+.goomba:nth-child(12){
+    width: 78px;
+    left: 11%;
+    top: 42px;
+}
+
+.mushroom{
+    position: absolute;
+}
+
+.mushroom:nth-child(13){
+    width: 45px;
+    left: 57%;
+    top: 96px;
+}
+.mushroom:nth-child(14){
+    width: 27px;
+    left: 75%;
+    top: 12px;
+}
+.mushroom:nth-child(15){
+    width: 32px;
+    left: 19%;
+    top: 30px;
+}
+
+.flower{
+    position: absolute;
+}
+
+.flower:nth-child(16){
+    width: 50px;
+    left: 2%;
+    top: 132px;
+
+}
+.flower:nth-child(17){
+    width: 40px;
+    left: 93%;
+    top: 62px;
+    
+}
+.flower:nth-child(18){
+    width: 32px;
+    left: 55%;
+    top: 23px;
+}
+.flower:nth-child(19){
+    width: 41px;
+    left: 35%;
+    top: 93px;
+}
+.flower:nth-child(20){
+    width: 46px;
+    left: 69%;
+    top: 112px;
+}
+
+#carnivora{
+    position: absolute;
+    width: 50px;
+    left: 48%;
+    top: 17px;
+}
+
+
+/* road objects */
+ 
+#luigi{
+    position: absolute;
+    transform: translate(10px, -25px);
+    animation: drive-luigi 3s both infinite cubic-bezier(.24,.87,.74,.14);
+           
+}
+
+#mario{
+    position: absolute;
+    transform: translate( -70px, 0px);
+    animation-name: drive-mario;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-direction: normal;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-timing-function:cubic-bezier(.43,.48,1,.37);
+}
+
+/* unsafe code
+.jump{
+    animation: jump .3s ease-in;
+} 
+*/
+
+
+/* keyframes - animations */
+
+@keyframes drive-mario{
+    from{transform: translateX(-300px) scale(.5)}
+    to{transform: translateX(1600px) scale(.5)}
+}
+
+@keyframes drive-luigi{
+    from{transform: translate(-50px, -25px) scale(1.1)}
+    to{transform: translate(1700px, -25px) scale(1.1)}
+}
+
+@keyframes wind{
+    from{transform: translateX(-500px)}
+    to{transform: translateX(1800px)}
+}
+
+/* 
+@keyframes jump{
+    0%{top: 0px}
+    50%{top: -60px}
+    100%{top: 0px}
+} 
+*/
+
+@keyframes drop{
+    0%{transform: translateY(-300px); opacity: 0;}
+    30%, 60%, 80%, 92%, 100%{transform: translateY(30px)}
+    42%{transform: translateY(-10px)}
+    71%{transform: translateY(10px)}
+    87%{transform: translateY(20px); opacity:1;}
+}
+
+@keyframes rotate{
+    0%{transform: translateY(-100px); opacity: 0;}
+    70%{transform: translateY( 60px)}
+    100%{transform: translateY( 30px) rotateZ(360deg); opacity: 1;}
+}
+
+
+/* media queries */ 
+
+@media screen and (min-width: 1800px){
+    @keyframes drive-mario{
+        from{transform: translate(-300px, 70px) scale(.6)}
+        to{transform: translate(2600px, 70px) scale(.6)}
+    }
+    
+    @keyframes drive-luigi{
+        from{transform: translate(-50px, -25px) scale(1.2)}
+        to{transform: translate(2800px, -25px) scale(1.2)}
+    }
+    
+    @keyframes wind{
+        from{transform: translateX(-500px)}
+        to{transform: translateX(2700px)}
+    }
+    
+}
