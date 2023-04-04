@@ -1,0 +1,362 @@
+body, ul, li, h1, h2, a{
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+/*header */ 
+
+header{ 
+    background-color: #f65614;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    z-index: 99;
+    top: 0;
+    left:0;
+    
+
+}
+ 
+header h1{
+    display: inline-block;
+    color: #f5f5f5;
+    border: #f5f5f5 solid 6px;
+    border-radius: 100px;
+    padding: 14px;
+    margin: 0px;
+    font-size: 23px;
+    font-family: "Press Start 2P";
+
+}
+
+
+.banner img{
+    max-width: 100%;
+    height: auto;
+}
+
+.banner .banner-quote{
+    background-image: linear-gradient(to bottom right, #ffce5b, #feb614, #ebab16 );
+    color: white;
+    border: #e5dbc2 outset 4px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px;
+    position: absolute;
+    top: 30%;
+    left: 13%;
+}
+
+.banner .banner-quote h2{   
+    font-size: 80px;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.603);
+}
+
+
+.banner h2 span{
+    display: block;
+    font-size: 1.3em;
+    
+}
+
+/* navigation bar */
+
+.main-nav{
+    position: sticky;
+    top: 92px;
+    background-color:#ff8c2d;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 99;
+}
+
+.main-nav ul{
+    white-space: nowrap;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav li{
+    display: inline-block;
+    width: 25%;
+    font-weight: 600;
+    
+}
+
+.main-nav li a{
+    text-decoration: none;
+    color: white;
+}
+
+/* first section - presentation */
+
+
+main{
+    max-width: 100%;
+    width: 1200px;
+    margin: 60px auto;
+    box-sizing: border-box;
+    
+}
+
+.presentation-article{
+    padding: 0 40px;
+}
+
+.presentation-article h2{
+    color: #f63232;
+    font-size: 30px;
+}
+
+.presentation-article p{
+    line-height: 2em;
+    color: #4b4b4b;
+}
+
+
+.profile-pic{
+    width: 20%;
+    float: right;
+}
+
+/* second section - games photos */
+
+.games-overview{ 
+    text-align: center;
+    margin: 30px 0;
+
+}
+
+.games-overview figure{
+    margin: 0;
+}
+
+.games-overview li{
+    color: #4b4b4b;
+    font-weight: bold;
+    display: inline-block;
+    width: 45%;
+    padding: 15px;
+    transition: 0.4s ease-in; 
+   
+}
+
+.games-overview li img{
+    max-width: 100%;
+}
+
+
+
+
+/* third section - carousel with characters */
+
+.wrap-carousel{
+    background-image: linear-gradient(0deg, rgba(246,50,50,0.85) 0%, rgba(246,86,20,0.85) 19%,
+     rgba(255,140,45,0.85) 45%, rgba(255,255,255,1) 80%);
+
+}
+
+.carousel-item{
+    position: relative;
+    text-align: center;
+    padding: 30px;
+}
+
+.carousel-item img{
+    max-width: 295px;
+    height: 295px;
+}
+
+.carousel-caption{
+    position: relative;
+    top: 0px;
+    width: 50%;
+    margin: 30px 10%;
+    color: black;
+    background-image:  linear-gradient(to bottom, rgba(245, 246, 252, 0.338), rgba(19, 26, 117, 0.429)),url("mario images/mario club/Mario-characters/mario-level.png");
+    background-size: cover;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.carousel-caption p{
+    padding: 0 20px;
+}
+
+.fa-solid{
+    color:rgb(14, 14, 85);
+    transform: scale(2.5);
+}
+
+/* fourth section - newsletter + footer */
+
+.join{
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 60px 20px;
+    color: #4b4b4b;
+}
+
+.join h2{
+    font-size: 36px;
+}
+
+form input{
+    position: relative;
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 28px;
+    border: 3px white solid;    
+}
+
+footer{
+    background-color: #f65614;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+/* pseudo-classes & pseudo-elements*/
+
+.main-nav li a:hover{
+    font-family: "Press Start 2P";
+    font-size: 15px;
+}
+
+.games-overview li:hover{
+    background-color: cornsilk; 
+    color: #f63232;
+    
+}
+
+.focus{
+    border: #310808 3px dashed;
+    outline: none;
+}
+
+.valid{
+    background-color: #b7ffa1;
+    border: #137013 3px solid;
+    outline: none;
+}
+
+.main-nav li:first-child{
+    font-style: italic;
+}
+
+
+*::selection{
+    color: white;
+    background-color: #ff643d;  /*il contenuto selezionato*/
+}
+.presentation-article p::first-letter{
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+
+/*media queries*/
+@media screen and (max-width: 2600px){
+
+
+    .main-nav li{
+        font-size: 22px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1800px){
+
+    .banner .banner-quote h2{
+        font-size: 50px;
+    }
+    .main-nav li{
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1050px){
+
+    .banner .banner-quote h2{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 920px){
+
+    .banner .banner-quote h2{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 780px){
+
+    .banner .banner-quote{
+        position: relative;
+        background: #feb614;
+        text-align: center;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        left: 0;
+        top: -4px;
+        padding: 10px;
+    }
+
+    .banner .banner-quote h2{
+        font-size: 25px;
+        text-shadow: none;
+    }
+    .banner .banner-quote span{
+        font-size: 1em;
+        display: inline;
+    }
+
+
+    .games-overview li{
+        width: 90%;
+        margin: 20px;
+        display: block;
+        
+         
+    }
+
+    .main-nav li{
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 560px){
+
+    .main-nav li{
+        font-size: 15px;
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    header{
+        position: fixed;
+    }
+
+    header h1{
+        font-size: 17px;
+        padding:10px;
+    }
+    .main-nav{
+        top: 78px;
+        padding: 5px;
+    }
+}
