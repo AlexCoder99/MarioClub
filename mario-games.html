@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+  <html lang="en">
+  <head>
+  <title>Mario games</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P:regular" rel="stylesheet">
+  <link href="mario-games-styling.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" type="image/png" href="mario images/Mario games/Coin.png">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+  <header>
+  <div class="nintendo"><img src="mario images/Mario games/Nintendo2.png"></div>
+  <div class="basket-icon"><img src="mario images/Mario games/basket.jpg"></div>
+  </header>
+
+
+
+  <ul class="products grid-wrapper">
+    <li>
+      <img src="mario images/Mario games/Super Mario Bros.jpg" class="game">
+      <h2>Super Mario Bros NES</h2>
+      <h3> 25 <img src="mario images/Mario games/Coin.png" class="coin"></h3>
+      <button>Add to Basket</button>
+    </li>
+    <li>
+      <img src="mario images/Mario games/Mario Kart.jpg" class="game">
+      <h2>Mario Kart</h2>
+      <h3> 40 <img src="mario images/Mario games/Coin.png" class="coin"></h3>
+      <button>Add to Basket</button>
+    </li>
+    <li>
+        <img src="mario images/Mario games/Super Mario Galaxy 2.jpg" class="game">
+        <h2>Super Mario Galaxy 2</h2>
+        <h3> 45 <img src="mario images/Mario games/Coin.png" class="coin"></h3>
+        <button>Add to Basket</button>
+      </li>
+    <li>
+      <img src="mario images/Mario games/New Super Mario Bros U.jpg" class="game">
+      <h2>New Super Mario Bros</h2>
+      <h3> 35 <img src="mario images/Mario games/Coin.png" class="coin"></h3>
+      <button>Add to Basket</button>
+    </li>
+    <li>
+      <img src="mario images/Mario games/New Super Luigi.png" class="game">
+      <h2>New Super Luigi</h2>
+      <h3> 60 <img src="mario images/Mario games/Coin.png" class="coin"></h3>
+      <button>Add to Basket</button>
+    </li>
+    <li>
+      <img src="mario images/Mario games/Super Mario 3d All stars.jpg" class="game">
+      <h2>Super Mario 3D All-Stars</h2>
+      <h3> 70 <img src="mario images/Mario games/Coin.png" class="coin"></h3>
+      <button>Add to Basket</button> 
+    </li>
+    <li>
+        <img src="mario images/Mario games/Mario & Sonic.jpg" class="game">
+        <h2>Mario & Sonic at the Olympic Games</h2>
+        <h3> 30 <img src="mario images/Mario games/Coin.png" class="coin"></h3>
+        <button>Add to Basket</button>
+      </li>
+      <li>
+        <img src="mario images/Mario games/Super Mario 3d World.jpg" class="game">
+        <h2>Super Mario 3D World</h2>
+        <h3> 80 <img src="mario images/Mario games/Coin.png" class="coin"></h3>
+        <button>Add to Basket</button>
+      </li>
+      <li>
+        <img src="mario images/Mario games/Super Mario Party.jpg" class="game">
+        <h2>Super Mario Party</h2>
+        <h3> 70 <img src="mario images/Mario games/Coin.png" class="coin"></h3>
+        <button>Add to Basket</button>
+      </li>
+      <li>
+        <img src="mario images/Mario games/Super Mario Maker 2.jpg" class="game">
+        <h2>Super Mario Maker 2</h2>
+        <h3> 100 <img src="mario images/Mario games/Coin.png" class="coin"></h3>
+        <button>Add to Basket</button>
+      </li>
+      <li>
+        <img src="mario images/Mario games/Super Mario Odyssey.jpg" class="game">
+        <h2>Super Mario Odyssey</h2>
+        <h3> 95 <img src="mario images/Mario games/Coin.png" class="coin"></h3>
+        <button>Add to Basket</button>
+      </li>
+      <li>
+        <img src="mario images/Mario games/Paper Mario.jpg" class="game">
+        <h2>Paper Mario: The Origami King</h2>
+        <h3> 90 <img src="mario images/Mario games/Coin.png" class="coin"></h3>
+        <button>Add to Basket</button>
+      </li>
+      <li>
+        <img src="mario images/Mario games/Luigi's mansion 3.jpg" class="game">
+        <h2>Luigi's Mansion 3</h2>
+        <h3> 75 <img src="mario images/Mario games/Coin.png" class="coin"></h3>
+        <button>Add to Basket</button>
+      </li>
+      <li>
+        <img src="mario images/Mario games/Mario rabbids.jpg" class="game">
+        <h2>Mario + Rabbids: Sparks of Hope </h2>
+        <h3> 60 <img src="mario images/Mario games/Coin.png" class="coin"></h3>
+        <button>Add to Basket</button>
+      </li>
+      <li>
+        <img src="mario images/Mario games/Mario strikers.jpg" class="game">
+        <h2>Mario Strikers</h2>
+        <h3> 100 <img src="mario images/Mario games/Coin.png" class="coin"></h3>
+        <button>Add to Basket</button>
+      </li>
+  </ul>
+
+
+  <script>
+    
+    $('button').on('click', function(){
+      const transaction = 
+        $(this).closest('li')
+        .find('.game')
+        .clone()
+        .addClass('zoom')
+        .appendTo('body');
+          const coin_sound = new Audio('mario images/Mario games/Coin_sound_effect.mp3');
+          coin_sound.play();
+            setTimeout(() => {
+              transaction.remove();
+            }, 1800);
+    });
+        
+      
+  </script>
+</body>
+</html>
