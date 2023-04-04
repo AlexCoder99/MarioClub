@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<head>
+    <html lang="en">  
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="mario images/Mario animations/mario.png">
+    <title>Mario Kart Animations</title>
+    <link rel="stylesheet" href="mario-animation-styling.css">
+    
+</head>
+
+<body> 
+
+
+    <div class="sky">
+        <img src="mario images/Mario animations/cloud.png" alt="" class="cloud">
+        <img src="mario images/Mario animations/cloud.png" alt="" class="cloud">
+        <img src="mario images/Mario animations/cloud.png" alt="" class="cloud">
+        <img src="mario images/Mario animations/cloud.png" alt="" class="cloud">
+        <img src="mario images/Mario animations/cloud.png" alt="" class="cloud">
+        <div style="text-align: center;">
+            <img src="mario images/Mario animations/mariokart64-logo.png" alt="" id="mariokart-logo">
+        </div>
+        <div style="text-align: center;">
+            <img src="mario images/Mario animations/mario-logo.png" alt="" class="emblem">
+            <img src="mario images/Mario animations/luigi-logo.png" alt="" class="emblem"> 
+        </div>  
+    </div>
+
+    <div class="grass">
+        <img src="mario images/Mario animations/wood-house.png" alt="" id="wood-house">
+        <img src="mario images/Mario animations/long-hills.png" alt="" id="long-hills">
+        <img src="mario images/Mario animations/hills1-new.png" alt="" id="eyes-hills1">
+        <img src="mario images/Mario animations/hills2-new.png" alt="" id="eyes-hills2">
+        <img src="mario images/Mario animations/yoshi.png" alt="" id="yoshi">
+        <img src="mario images/Mario animations/red-yoshi.png" alt="" id="red-yoshi">
+        <img src="mario images/Mario animations/red-koopa.png" alt="" class="koopa">
+        <img src="mario images/Mario animations/koopa.png" alt="" class="koopa">
+        <img src="mario images/Mario animations/koopa.png" alt="" class="koopa">
+        <img src="mario images/Mario animations/goomba.png" alt="" class="goomba">
+        <img src="mario images/Mario animations/goomba.png" alt="" class="goomba">
+        <img src="mario images/Mario animations/goomba3.png" alt="" class="goomba">
+        <img src="mario images/Mario animations/mushroom.png" alt="" class="mushroom">
+        <img src="mario images/Mario animations/mushroom.png" alt="" class="mushroom">
+        <img src="mario images/Mario animations/mushroom.png" alt="" class="mushroom">
+        <img src="mario images/Mario animations/flower.png" alt="" class="flower">
+        <img src="mario images/Mario animations/flower.png" alt="" class="flower">
+        <img src="mario images/Mario animations/flower.png" alt="" class="flower">
+        <img src="mario images/Mario animations/ice-flower.png" alt="" class="flower">
+        <img src="mario images/Mario animations/ice-flower.png" alt="" class="flower">
+        <img src="mario images/Mario animations/carnivora.png" alt="" id="carnivora">
+        
+    </div>
+    <div class="road">
+        <div class="lines"> </div>
+        <img src="mario images/Mario animations/luigi-kart.png" alt="" id="luigi">
+        <img src="mario images/Mario animations/mario-kart.png" alt="" id="mario" >
+    </div>
+
+
+    <script>
+
+        const musicStage = new Audio('mario images/Mario animations/Super Mario Kart Title Menu Theme - 8 Bit (VRC6).mp3');
+
+        musicStage.addEventListener('canplaythrough', () => {
+            musicStage.play().catch(e => {
+                window.addEventListener('click', () => {
+                    musicStage.play();
+                    musicStage.autoplay = true;
+                }, { once: true })
+            })
+            });
+
+        // const animateJump = document.querySelector('#luigi');
+
+        // document.addEventListener('keydown', (e) => {
+        //     if(e.key == ' '){
+        //         animateJump.classList.add('jump');
+        //         setTimeout(() => {
+        //             animateJump.classList.remove('jump');
+        //             }, 300);
+        //     } 
+        // })
+
+    </script>
+
+</body>
+
+</html>
